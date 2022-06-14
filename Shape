@@ -2,7 +2,6 @@ public class Shape {
     public String color;
     public int size;
 
-
     public Shape(String color, int size){
         this.color = color;
         this.size = size;
@@ -28,6 +27,8 @@ public class Shape {
         return ("The color "+ color+"\n" + "The size "+size );
     }
 }
+
+
 public class Rectangle extends Shape{
     public int length;
     public int width;
@@ -39,8 +40,6 @@ public class Rectangle extends Shape{
         this.width = width;
 
     }
-
-
 
     public int calArea (int length, int width){
 
@@ -54,16 +53,47 @@ public class Rectangle extends Shape{
     }
 }
 
+
+public class Circle extends Shape{
+
+    public int radius;
+    final int pi = 4;
+
+    public Circle(String color, int size, int radius){
+        super(color, size);
+        this.radius = radius;
+
+    }
+
+    @Override
+    public int calArea(int radius,int pi){
+        return (radius*radius * pi);
+    }
+
+    @Override
+
+    public String toString(){
+        return ("The color is "+ color+"\n" + "The size "+size + "\n"+ "The radius "+radius+"\n"+ "\n"+"The area: "+calArea(radius,pi));
+    }
+}
+
+
 import java.util.*;
+
 public class TestMain {
     public static void main (String args []){
 
         Shape s = new Shape("Red", 80);
         Rectangle r = new Rectangle("Blue", 20, 6, 6);
+        Circle c = new Circle ("Red",30,5);
+
+        System.out.println("The Shape");
         System.out.println(s.toString());
+        System.out.println("The Rectangle");
         System.out.println(r.toString());
         System.out.println(r.calArea(r.length, r.width));
-
+        System.out.println("The Circle");
+        System.out.println(c.toString());
 
     }
 }
