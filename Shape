@@ -53,6 +53,8 @@ public class Rectangle extends Shape{
         return ("The color is "+ color+"\n" + "The size "+size + "\n"+ "The length "+length+"\n"+ "The width "+width+"\n"+"The area: "+calArea(length,width));
     }
 }
+
+import java.util.*;
 public class TestMain {
     public static void main (String args []){
 
