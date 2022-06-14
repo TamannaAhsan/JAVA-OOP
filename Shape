@@ -1,0 +1,71 @@
+class Shape{
+    
+    public String color;
+    public int size;
+    
+    public Shape(String color, int size){
+        this.color = color;
+        this.size = size;
+    }
+    
+    public String color(String x){
+        
+        return x;
+        
+    }
+    
+    public int size(int x){
+        
+        return x;
+        
+    }
+    
+    public String toString(){
+        return ("The color "+ color+"\n" + "The size "+size );
+    }
+    
+}
+
+class Rectangle extends Shape{
+    
+    public int length=9;
+    public int width=9;
+    
+    public Rectangle(String color, int size, int length, int width){
+        
+        super (color, size);
+        
+        this.length = length;
+        this.width = width;
+        
+    }
+    
+    public int calArea (int length, int width){
+        
+        return (length * width);
+    }
+    
+    //@Override
+    
+     //public String toString(){
+        //return ("The color "+ color+"\n" + "The size "+size + "\n"+ "The length "+length+"\n"+ "The width "+width );
+    //}
+}
+
+ public class TestMain{
+   
+        public static void main (String args []){
+            
+            
+            
+            Shape s = new Shape("Red", 80);
+            Rectangle r = new Rectangle("Blue", 20, 6, 6);
+            
+            
+            System.out.println(s.toString());
+            System.out.println(r.toString());
+            System.out.println(r.calArea());
+            
+        }
+    
+}
