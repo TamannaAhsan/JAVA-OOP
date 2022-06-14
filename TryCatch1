@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class TryCatch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter values a & b: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int sum = a + b;
+        System.out.println(sum);
+        try {
+
+            int div = a / b;
+            System.out.println(div);
+
+        }catch(ArithmeticException e) {
+            System.out.println("Please give valid values: ");
+            b = sc.nextInt();
+            int div = a/b;
+            System.out.println("Result: "+div);
+
+        }
+    }
+}
