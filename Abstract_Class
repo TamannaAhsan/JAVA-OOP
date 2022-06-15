@@ -1,0 +1,80 @@
+abstract class Employee {
+
+    public int id;
+    public String name;
+    public String address;
+    public String phone;
+
+    public Employee(int id, String name, String address, String phone){
+
+        this.id = id;
+        this.name= name;
+        this.address = address;
+        this.phone = phone;
+
+    }
+
+    abstract public int salary(int salary);
+    abstract public int salaryBonus(int salary);
+    abstract public String toString();
+
+}
+
+public class Manager extends Employee {
+
+    public int salary;
+    public int hr;
+
+    public Manager(int id, String name, String address, String phone, int salary, int hr){
+        super(id, name, address,phone);
+        this.salary = salary;
+        this.hr= hr;
+
+    }
+
+    public int salary(int salary){
+        return (salary*hr);
+    }
+    public int salaryBonus(int salary){
+
+        return (salary*hr +2000);
+    }
+    public String toString(){
+        return ("Id: "+id+"\n"+"Name: "+name+"\n"+"Address: "+address+"\n"+"Phone: "+phone+"\n"+"Salary: "+salary(salary)+"\n");
+    }
+}
+public class Supervisor extends Employee{
+
+        public int salary;
+        public int hr;
+
+        public Supervisor(int id, String name, String address, String phone, int salary, int hr){
+            super(id, name, address,phone);
+            this.salary = salary;
+            this.hr= hr;
+
+        }
+
+        public int salary(int salary){
+            return (salary*hr);
+        }
+        public int salaryBonus(int salary){
+
+            return (salary*hr +2000);
+        }
+        public String toString(){
+            return ("Id: "+id+"\n"+"Name: "+name+"\n"+"Address: "+address+"\n"+"Phone: "+phone+"\n"+"Salary: "+salary(salary)+"\n");
+        }
+    }
+
+import java.util.*;
+public class TestMain {
+
+    public static void main (String [] args){
+
+        Manager m = new Manager(1,"Ahmed", "Mirpur","0987", 5000, 6);
+        System.out.println(m);
+
+
+    }
+}
