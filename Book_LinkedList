@@ -1,0 +1,51 @@
+public class Book {
+    
+    int id;
+    String name, author;
+    int quantity;
+    
+    public Book(int id, String name, String author, int quantity){
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.quantity = quantity;
+        
+    }
+    
+}
+import java.util.*;
+
+public class TestMain {
+    public static void main(String [] args){
+
+        LinkedList<Book> list = new LinkedList<Book>();
+
+        Book b1 = new Book(1, "Diya", "Kamil",8);
+        Book b2 = new Book(2, "Diya", "Kamil",8);
+        Book b3 = new Book(3, "Diya", "Kamil",8);
+        Book b4 = new Book(4, "Diya", "Kamil",8);
+        Book b5 = new Book(5, "Diya", "Kamil",8);
+
+        list.add(b1);
+        list.add(b2);
+        list.add(b3);
+        list.add(b4);
+        list.add(b5);
+
+        //list.remove(b5);
+        //list.addFirst(b2);
+        //list.remove(b5);
+
+
+
+        for (Book b: list
+             ) {
+            System.out.println("Deatils: "+b.id+" "+b.name+" "+b.author+" "+b.quantity);
+
+        }
+
+
+
+    }
+
+}
