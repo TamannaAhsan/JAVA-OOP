@@ -1,0 +1,33 @@
+import java.util.*;
+public class Person {
+	
+	int id;
+	int ph;
+		
+	public Person  () {
+		Scanner sc = new Scanner(System.in);
+		int idP,phP;
+		idP = sc.nextInt();
+		phP = sc.nextInt();
+		this.id = idP;
+		this.ph = phP;
+	}
+	
+	public void display () {
+		System.out.println(id+"\n"+ph);
+	}
+	
+}
+import java.util.*;
+public class TestMain {
+	public static void main(String [] args) {
+		
+		System.out.println("Enter values: ");
+		Person p = new Person();
+		p.display();
+		
+	
+}
+
+
+}
