@@ -1,0 +1,18 @@
+public class TestMain {
+    public static void main(String[] args) {
+        int width = 50;
+
+        //Drawable d = ()->{System.out.println("Drawing: "+width);};
+
+        //d.draw();
+       /* Drawable d = () ->{System.out.println("hi");};
+        d.draw();*/
+        //Drawable d = (s) -> {return (s);};
+        //System.out.println(d.toSay("hello"));
+        Drawable d = (a, b) -> (a + b);
+        {
+            System.out.println("Addition: " + d.math(10, 20));
+        };
+
+    }
+}
