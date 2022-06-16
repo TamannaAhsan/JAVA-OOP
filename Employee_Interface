@@ -1,0 +1,75 @@
+interface Bank {
+
+    String print ();
+}
+
+import java.util.*;
+interface  Employee extends Bank {
+
+     int salary(int salary);
+     String toString();
+     int salaryBonus(int salary);
+
+
+}
+class Manager implements Employee,Bank {
+
+    int id;
+    String name;
+    String phone;
+    int hr;
+    int salary;
+
+    public Manager(int id, String name, String phone, int hr, int salary){
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.hr = hr;
+        this.salary = salary;
+    }
+
+    public int salary(int salary){
+        return (hr*salary);
+    }
+
+    public int salaryBonus(int salary){
+        return (salary(salary)+2000);
+    }
+    public String toString (){
+        return ("Details "+"Id \n"+id+"Name \n"+name+"phone \n"+phone+"Salary \n"+salary(salary));
+    }
+    public String print (){
+        return ("hi");
+    }
+
+}
+public class Local extends Manager {
+
+    public Local(int id, String name, String phone, int hr, int salary){
+        super(id, name, phone, hr, salary);
+    }
+    public int salary(int salary){
+        return (hr*salary);
+    }
+
+    public int salaryBonus(int salary){
+        return (salary(salary)+2000);
+    }
+    @Override
+    public String toString (){
+        return ("Details "+"Id \n"+id+"Name \n"+name+"phone \n"+phone+"Salary \n"+salary(salary)+"hOUR: "+hr);
+    }
+}
+
+import java.util.*;
+public class TestMain {
+    public static void main (String [] args){
+
+        Manager m = new Manager (1, "Saad", "0987655",5,4000);
+        //System.out.println(m.toString());
+        Local l = new Local (2, "Sid", "0987655",5,2000);
+        //System.out.println(l.toString());
+        System.out.println(m.print());
+    }
+}
+
