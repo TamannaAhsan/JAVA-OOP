@@ -1,0 +1,20 @@
+abstract class AnonymousInner {
+
+    abstract void msg();
+
+}
+
+import java.util.*;
+public class TestMain {
+    public static void main(String[] args) {
+
+        AnonymousInner a = new AnonymousInner() {
+            @Override
+            void msg() {
+                System.out.println("Hi");
+            }
+        };
+        a.msg();
+
+    }
+}
