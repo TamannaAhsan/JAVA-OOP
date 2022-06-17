@@ -1,0 +1,46 @@
+public class Book {
+
+    int id;
+    int quantity;
+    String name, author;
+
+    public Book(int id, int quantity, String name, String author){
+        this.id = id;
+        this.quantity = quantity;
+        this. name = name;
+        this.author = author;
+    }
+
+}
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TestMain {
+    public static void main (String [] args){
+
+        Map<Integer, Book> m = new HashMap<Integer, Book>();
+
+        Book b1 = new Book(1,2, "Nasir", "Miad");
+        Book b2 = new Book(2,2, "Nasir", "Miad");
+        Book b3 = new Book(3,2, "Nasir", "Miad");
+        Book b4 = new Book(4,2, "Nasir", "Miad");
+
+        m.put(1,b1);
+        m.put(2,b2);
+        m.put(3,b3);
+
+        for (Map.Entry<Integer, Book> entry: m.entrySet()
+             ) {
+            int key = entry.getKey();
+            Book b = entry.getValue();
+            System.out.println(key+" "+"Details ");
+            System.out.println(b.id+" "+b.quantity+" "+b.name+" "+b.author);
+            
+        }
+
+
+
+    }
+}
+
