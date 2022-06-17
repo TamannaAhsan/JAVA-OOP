@@ -1,0 +1,29 @@
+public class MemberInner {
+
+    private int data = 50;
+
+    class Inner{
+        public void msg (){
+
+            System.out.println("data is "+data);
+        }
+        public void dispaly(){
+
+            System.out.println("Hi");
+        }
+
+    }
+}
+
+import java.util.*;
+public class TestMain {
+    public static void main(String [] args){
+
+        MemberInner obj = new MemberInner();
+        MemberInner.Inner o = obj.new Inner();
+
+        o.msg();
+        o.dispaly();
+
+    }
+}
