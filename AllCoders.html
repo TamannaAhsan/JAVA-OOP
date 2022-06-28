@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <h1>All coders list</h1>
+    <h3 th:text="${msg}"></h3>
+
+    <table>
+        <tr th:each="p: ${programmers}">
+            <td th:text="${p.cId}"></td>
+            <td th:text="${p.cName}"></td>
+            <td th:text="${p.clang}"></td>
+
+        </tr>
+    </table>
+
+
+
+</body>
+</html>

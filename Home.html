@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Coder Data</h1>
+<h3 th:text="${msg}"></h3>
+<form action="addCoder">
+    <h3>Coder Id</h3>
+    <input type="text" name="cId"></input>
+    <h3>Coder Name</h3>
+    <input type="text" name="cName"></input>
+    <h3>Coder language</h3>
+    <input type="text" name="clang"></input>
+    <button type="submit">Add</button>
+</form>
+
+
+</body>
+</html>
